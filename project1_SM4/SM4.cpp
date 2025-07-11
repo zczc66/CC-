@@ -1,4 +1,5 @@
 #include<iostream>
+#include <chrono>
 using namespace std;
 
 //Round = 32轮数
@@ -175,9 +176,18 @@ int main() {
     unsigned long MK[4] = { 0x01234567, 0x89abcdef, 0xfedcba98, 0x76543210 };//加密密钥
     unsigned long X[36] = { 0x01234567, 0x89abcdef, 0xfedcba98, 0x76543210 };//明文
     unsigned long C[36] = { 0x681edf34, 0xd206965e, 0x86b3e94f, 0x536e4246 };//密文
-    sm4_enc(MK, X);
-    sm4_dec(MK, C);
 
+    auto start = chrono::high_resolution_clock::now();
+    sm4_enc(MK, X);
+    auto end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start).count();
+    cout << "加密耗时：" << duration << " 微秒" << endl;
+
+    auto start = chrono::high_resolution_clock::now();
+    sm4_dec(MK, C);
+    auto end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start).count();
+    cout << "解密耗时：" << duration << " 微秒" << endl;
     cout << "\n== ECB Mode Test ==" << endl;
     unsigned long ecb_data[8] = {
         0x01234567, 0x89abcdef, 0xfedcba98, 0x76543210,
