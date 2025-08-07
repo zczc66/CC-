@@ -317,61 +317,7 @@ int main() {
     end = chrono::high_resolution_clock::now();
     duration = chrono::duration_cast<chrono::microseconds>(end - start).count();
     cout << "½âÃÜºÄÊ±£º" << duration<< " Î¢Ãë" << endl;
-/*
-    cout << "T0:" << endl;
-    for (int i = 0; i <= 31; i++)
-    {
-        cout << setfill('0') << setw(8) << hex << T0[i * 8] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 1] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 2] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 3] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 4] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 5] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 6] << "\t"
-            << setfill('0') << setw(8) << hex << T0[i * 8 + 7] << endl;
 
-    }
-
-    cout << "T1:" << endl;
-    for (int i = 0; i <= 31; i++)
-    {
-        cout << setfill('0') << setw(8) << hex << T1[i * 8] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 1] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 2] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 3] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 4] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 5] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 6] << "\t"
-            << setfill('0') << setw(8) << hex << T1[i * 8 + 7] << endl;
-
-    }
-    cout << "T2:" << endl;
-    for (int i = 0; i <= 31; i++)
-    {
-        cout << setfill('0') << setw(8) << hex << T2[i * 8] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 1] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 2] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 3] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 4] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 5] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 6] << "\t"
-            << setfill('0') << setw(8) << hex << T2[i * 8 + 7] << endl;
-
-    }
-    cout << "T3:" << endl;
-    for (int i = 0; i <= 31; i++)
-    {
-        cout << setfill('0') << setw(8) << hex << T3[i * 8] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 1] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 2] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 3] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 4] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 5] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 6] << "\t"
-            << setfill('0') << setw(8) << hex << T3[i * 8 + 7] << endl;
-
-    }
-*/
     return 0;
 
 }
